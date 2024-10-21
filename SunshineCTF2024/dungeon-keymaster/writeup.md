@@ -20,7 +20,7 @@ This is the core function where two main operations take place:
 
 The first check involves splitting the input key into three parts using the dash (`-`) as a delimiter.
 
-![Key Split](/dungeon-keymaster/assets/image2.png)
+![Key Split](./assets//image2.png)
 
 The program ensures that the key consists of three parts, separated by dashes. The next step is to verify each part.
 
@@ -28,7 +28,7 @@ The program ensures that the key consists of three parts, separated by dashes. T
 
 The second check is more significant, as it verifies whether the key parts match specific values. 
 
-![Key Comparison Overview](/dungeon-keymaster/assets/image3.png)
+![Key Comparison Overview](./assets//image3.png)
 
 #### String Comparison Breakdown
 
@@ -42,7 +42,7 @@ To better understand the logic, I manually undefined the string offsets in IDA (
 
 The first part of the key is extracted and compared against 8 bytes from the data section.
 
-![First Part Check](/dungeon-keymaster/assets/image4.png)
+![First Part Check](./assets//image4.png)
 
 The extracted value corresponds to the string `"/dungeon"`.
 
@@ -50,7 +50,7 @@ The extracted value corresponds to the string `"/dungeon"`.
 
 The second check compares the next 4 bytes from the data section.
 
-![Second Part Check](/dungeon-keymaster/assets/image5.png)
+![Second Part Check](./assets//image5.png)
 
 This results in the string `"8734"`, which is the port number the app is running on.
 
@@ -58,7 +58,7 @@ This results in the string `"8734"`, which is the port number the app is running
 
 The final check involves comparing 21 bytes from the data section.
 
-![Third Part Check](/dungeon-keymaster/assets/image10.png)
+![Third Part Check](./assets//image10.png)
 
 This corresponds to the string `"http://localhost:8734"`, which represents the URL of the local server.
 
@@ -75,7 +75,7 @@ Based on the above analysis, we can construct the complete key as follows:
 ## Getting the Flag
 
 Now that we have the correct key, lets retrieve the flag. The binary contains a form-handling function called `mainHandle_form`
-![Form Handling](/dungeon-keymaster/assets/image11.png)
+![Form Handling](./assets//image11.png)
 
 The function is checking for the post req and ensuring that the key param is getting passed in the url 
 
@@ -87,7 +87,7 @@ The function is checking for the post req and ensuring that the key param is get
 curl --insecure -X POST "https://keymaster.2024.sunshinectf.games/dungeon?key=/dungeon-8734-http://localhost:8734"
 
 ```
-![Form Handling](/dungeon-keymaster/assets/image12.png)
+![Form Handling](./assets//image12.png)
 
 ```
 THATS IT FOR TODAY I HOPE U LEARNED SOMETHING NEW (M0ud4) 
